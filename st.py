@@ -1,4 +1,4 @@
-pip install -r requirements.txt
+pip install scipy
 import pandas as pd
 from scipy.stats import norm
 import numpy as np
