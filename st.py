@@ -1,5 +1,5 @@
 import pandas as pd
-#from scipy.stats import norm
+from scipy.stats import norm
 import numpy as np
 def perform_ab_test(control_visitors, control_conversions, treatment_visitors, treatment_conversions, confidence_level):
     # Calculate conversion rates for control and treatment groups
