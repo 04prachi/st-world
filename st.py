@@ -1,5 +1,5 @@
 import pandas as pd
-from scipy.stats import norm
+from scipy.stats import t
 import numpy as np
 def perform_ab_test(control_visitors, control_conversions, treatment_visitors, treatment_conversions, confidence_level):
     # Calculate conversion rates for control and treatment groups
@@ -14,11 +14,11 @@ def perform_ab_test(control_visitors, control_conversions, treatment_visitors, t
 
     # Calculate Z-score for the given confidence level
     if confidence_level == 90:
-        z_critical = norm.ppf(0.95)
+        z_critical = t.ppf(0.95)
     elif confidence_level == 95:
-        z_critical = norm.ppf(0.975)
+        z_critical = t.ppf(0.975)
     elif confidence_level == 99:
-        z_critical = norm.ppf(0.995)
+        z_critical = t.ppf(0.995)
     else:
         raise ValueError("Confidence level should be one of 90, 95, or 99.")
 
