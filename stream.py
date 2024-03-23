@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-#from scipy import stats
-#from scipy.stats import norm
+scipy==1.7.3
+from scipy import stats
+from scipy.stats import norm
 def perform_ab_test(control_visitors, control_conversions, treatment_visitors, treatment_conversions, confidence_level):
     # Calculate conversion rates for control and treatment groups
     control_conversion_rate = control_conversions / control_visitors
