@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+!pip install scipy
 from scipy import stats
 from scipy.stats import norm
 def perform_ab_test(control_visitors, control_conversions, treatment_visitors, treatment_conversions, confidence_level):
